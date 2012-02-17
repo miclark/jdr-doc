@@ -7,12 +7,16 @@ The JBoss Diagnostic Reporter (JDR, pronounced like 'jitter') is an AS7 subsyste
 * deployment information
 * runtime information (so long as AS7 is running during collection)
 
+\pagebreak
+
 # Executing JDR
 
 There are two ways to execute JDR currently:
 
 1. via the AS7 administration interface using jboss-cli.sh
 2. via the jdr.sh script in $JBOSS_HOME/bin
+
+\pagebreak
 
 ### via the administration interface
 
@@ -25,6 +29,8 @@ In standalone mode:
 In domain mode:
 
     /host=$host/server=$server/subsystem=jdr/:generate-jdr-report
+
+\pagebreak
 
 ### via jdr.sh
 
