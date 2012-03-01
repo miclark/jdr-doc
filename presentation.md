@@ -32,8 +32,6 @@ From $JBOSS_HOME execute bin/jdr.sh. The script will prompt you for administrati
 
 # What do the reports look like?
 
-The report is a zip file containing a fairly simple directory structure:
-
     JBOSSHOME/standalone/configuration/standalone-ha.xml
     JBOSSHOME/standalone/configuration/standalone-full.xml
     JBOSSHOME/standalone/configuration/standalone_xml_history/standalone.initial.xml
@@ -72,12 +70,51 @@ The report is a zip file containing a fairly simple directory structure:
 
 # jarinfo.txt
 
-* contains name, md5sum, and manifest for every AS7 system jar
-* name\nmd5sum\nmanifest\n\n is the format
+    JBOSSHOME/modules/org/w3c/css/sac/main/sac-1.3.jar
+    eb04fa63fc70c722f2b8ec156166343b
+    Manifest-Version: 1.0
+    Created-By: 1.2.2 (Blackdown Java-Linux Team)
+
+    JBOSSHOME/modules/org/yaml/snakeyaml/main/snakeyaml-1.8.jar
+    59099d0b410dc146e7e76375ad260dcd
+    Manifest-Version: 1.0
+    Archiver-Version: Plexus Archiver
+    Created-By: Apache Maven
+    Built-By: somov
+    Build-Jdk: 1.5.0_19
+
+### format:
+
+    path/to/jar
+    md5 checksum
+    manifest
+    \n
 
 # jboss_home_tree.txt
 
-This is a tree-like representation of $JBOSS_HOME
+    /home/jjaggars/workspace/jboss-as/build/target/jboss-as-7.1.1.Final-SNAPSHOT
+    [user group 4.0K]       +-- appclient
+    [user group 4.0K]       |   +-- configuration
+    [user group 7.0K]       |       +-- appclient.xml
+    [user group 2.0K]       |       +-- logging.properties
+    [user group 4.0K]       +-- bin
+    [user group 1.9K]       |   +-- add-user.bat
+    [user group 2.0K]       |   +-- add-user.sh
+    [user group 2.5K]       |   +-- appclient.bat
+    [user group 1.9K]       |   +-- appclient.conf
+    [user group 2.6K]       |   +-- appclient.conf.bat
+    [user group 3.6K]       |   +-- appclient.sh
+    [user group 4.0K]       |   +-- client
+    [user group 3.2M]       |   |   +-- jboss-client.jar
+    [user group 1.5K]       |   |   +-- README.txt
+    [user group 3.5K]       |   +-- domain.bat
+    [user group 2.7K]       |   +-- domain.conf
+    [user group 3.4K]       |   +-- domain.conf.bat
+    [user group 8.0K]       |   +-- domain.sh
+    [user group 4.0K]       |   +-- init.d
+    [user group 3.6K]       |   |   +-- jboss-as-standalone.sh
+    [user group 369]        |   |   +-- jboss-as.conf
+    ...
 
 # Deployments
 
