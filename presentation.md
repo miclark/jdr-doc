@@ -28,7 +28,9 @@ In domain mode:
 
 ### via jdr.sh
 
-From $JBOSS_HOME execute bin/jdr.sh. The script will prompt you for administration credentials if necessary.
+    $JBOSS_HOME/bin/jdr.sh
+
+The script will prompt you for administration credentials if necessary.
 
 # What do the reports look like?
 
@@ -118,5 +120,20 @@ From $JBOSS_HOME execute bin/jdr.sh. The script will prompt you for administrati
 
 # Deployments
 
-* Each deployment will be represented by a deployment_name.txt file under sos_strings/as7
-* The contents of the text file will be a file listing of the internals of the deployment
+Each deployment will be represented by a deployment_name.txt file under sos_strings/as7
+
+    META-INF/MANIFEST.MF:127
+    META-INF/maven/org.jboss.as.quickstarts/jboss-as-helloworld/pom.properties:137
+    META-INF/maven/org.jboss.as.quickstarts/jboss-as-helloworld/pom.xml:4219
+    WEB-INF/beans.xml:289
+    WEB-INF/classes/org/jboss/as/quickstarts/helloworld/HelloService.class:678
+    WEB-INF/classes/org/jboss/as/quickstarts/helloworld/HelloWorldServlet.class:1749
+    index.html:144
+
+### format:
+
+    path/to/file:size in bytes
+
+Be aware that empty folders are not captured.
+
+# Questions?
