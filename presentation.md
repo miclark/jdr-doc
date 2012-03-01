@@ -7,8 +7,6 @@ The JBoss Diagnostic Reporter (JDR, pronounced like 'jitter') is an AS7 subsyste
 * deployment information
 * runtime information (so long as AS7 is running during collection)
 
----
-
 # Executing JDR
 
 There are two ways to execute JDR currently:
@@ -16,9 +14,7 @@ There are two ways to execute JDR currently:
 1. via the AS7 administration interface using jboss-cli.sh
 2. via the jdr.sh script in $JBOSS_HOME/bin
 
----
-
-# via the administration interface
+### via the administration interface
 
 The operation used to invoke JDR depends on the operation mode of AS7.
 
@@ -30,13 +26,9 @@ In domain mode:
 
     /host=$host/server=$server/subsystem=jdr/:generate-jdr-report
 
----
-
-# via jdr.sh
+### via jdr.sh
 
 From $JBOSS_HOME execute bin/jdr.sh. The script will prompt you for administration credentials if necessary.
-
----
 
 # What do the reports look like?
 
@@ -73,27 +65,19 @@ The report is a zip file containing a fairly simple directory structure:
     sos_logs/sos.log
     sos_logs/ui.log
 
----
-
 * Files copied from the system are placed beneath `JBOSSHOME`.
 * Files generated from runtime commands are placed beneath sos_strings/as7/
 * Simple text and html reports are placed under sos_reports
 * sos_logs contains logfiles that pertain the execution of sosreport itself
-
----
 
 # jarinfo.txt
 
 * contains name, md5sum, and manifest for every AS7 system jar
 * name\nmd5sum\nmanifest\n\n is the format
 
----
-
 # jboss_home_tree.txt
 
 This is a tree-like representation of $JBOSS_HOME
-
----
 
 # Deployments
 
