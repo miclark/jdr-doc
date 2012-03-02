@@ -1,6 +1,12 @@
-# JBoss Diagnostic Reporter
+% JBoss Diagnostic Reporter
+% Jesse Jaggars, Michael Clark
+% March 01, 2012
 
-The JBoss Diagnostic Reporter (JDR, pronounced like 'jitter') is an AS7 subsystem built to collect useful information and documents to aid in troubleshooting. The types of information gathered by JDR includes:
+# Overview 
+
+The JBoss Diagnostic Reporter (JDR, pronounced like 'jitter') is an AS7
+subsystem built to collect useful information and documents to aid in
+troubleshooting. The types of information gathered by JDR includes:
 
 * configuration files
 * log files
@@ -31,6 +37,15 @@ In domain mode:
     $JBOSS_HOME/bin/jdr.sh
 
 The script will prompt you for administration credentials if necessary.
+
+# Domain Mode Considerations
+
+When executing JDR in domain mode, calls made to the the management interface
+will only collect from the server specified. For example:
+
+    /host=master/server=server-one/subsystem=jdr/:generate-jdr-report
+
+Will only capture runtime information from master.server-one. 
 
 # What do the reports look like?
 
@@ -120,7 +135,8 @@ The script will prompt you for administration credentials if necessary.
 
 # Deployments
 
-Each deployment will be represented by a deployment_name.txt file under sos_strings/as7
+Each deployment will be represented by a deployment_name.txt file under
+sos_strings/as7
 
     META-INF/MANIFEST.MF:127
     META-INF/maven/org.jboss.as.quickstarts/jboss-as-helloworld/pom.properties:137
@@ -135,5 +151,13 @@ Each deployment will be represented by a deployment_name.txt file under sos_stri
     path/to/file:size in bytes
 
 Be aware that empty folders are not captured.
+
+# version.txt
+
+Each JDR archive contains a version file that lists the version of sosreport as
+well as each plugin that was executed.
+
+    sosreport: 2.3
+    as7: 1.0
 
 # Questions?
